@@ -1,6 +1,6 @@
 document.addEventListener('keydown', function(event) {
-    if (event.shiftKey && event.key.toLowerCase() === 's') {
-        document.addEventListener('keydown', handleSpeedChange);
+    if (event.altKey && (event.key === '+' || event.key === '-')) {
+        handleSpeedChange(event);
     }
 });
 
@@ -10,7 +10,6 @@ function handleSpeedChange(event) {
     } else if (event.key === '-') {
         changePlaybackSpeed(-0.25);
     }
-    // Keep the listener for continuous speed changes
 }
 
 function changePlaybackSpeed(change) {
@@ -37,7 +36,7 @@ function createSpeedOverlay() {
     overlay.style.fontSize = '24px';
     overlay.style.fontWeight = 'bold';
     overlay.style.pointerEvents = 'none'; // Prevent interference with clicks
-    overlay.style.transition = 'opacity 0.5s ease'; // Add smooth fade-out
+    overlay.style.transition = 'opacity 0.3s ease'; // Add smooth fade-out
     overlay.style.opacity = '0'; // Hidden by default
     document.body.appendChild(overlay);
     return overlay;
