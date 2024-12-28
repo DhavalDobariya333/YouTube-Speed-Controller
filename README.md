@@ -18,6 +18,8 @@
 
 ## Usage
 
-1. Go to a YouTube video.
-2. Press `Shift + S` to enable speed control.
-3. Use `+` and `-` to adjust the speed.
+1. Navigate to any YouTube video
+2. Use Alt + '+' to increase speed
+3. Use Alt + '-' to decrease speed
+4. Watch the speed indicator appear briefly on screen
+
